@@ -21,12 +21,15 @@
        label {
            display: block;
            margin-bottom: 10px;
+           text-align: left;
        }
-       select {
-           width: 100%;
-           padding: 8px;
-           margin-bottom: 15px;
-           box-sizing: border-box;
+       .options {
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
+       }
+       input[type="radio"] {
+           margin-right: 5px;
        }
        button {
            background-color: #4CAF50;
@@ -49,40 +52,40 @@
 </script>
 <body>
 <form id="feedbackForm" onsubmit="showDialog(); return false;">
-<label for="q1">Favorite Programming Language:</label>
-<select id="q1" name="question1">
-<option value="javascript">JavaScript</option>
-<option value="python">Python</option>
-<option value="java">Java</option>
-<option value="cpp">C++</option>
-<option value="other">Other</option>
-</select>
-<label for="q2">Preferred Coding Environment:</label>
-<select id="q2" name="question2">
-<option value="vscode">Visual Studio Code</option>
-<option value="pycharm">PyCharm</option>
-<option value="eclipse">Eclipse</option>
-<option value="sublime">Sublime Text</option>
-<option value="other">Other</option>
-</select>
-<label for="q3">Code Review Experience:</label>
-<select id="q3" name="question3">
-<option value="positive">Positive</option>
-<option value="neutral">Neutral</option>
-<option value="negative">Negative</option>
-</select>
-<label for="q4">Favorite Programming Paradigm:</label>
-<select id="q4" name="question4">
-<option value="oop">Object-Oriented Programming</option>
-<option value="fp">Functional Programming</option>
-<option value="procedural">Procedural Programming</option>
-<option value="other">Other</option>
-</select>
-<label for="q5">Code Documentation Practice:</label>
-<select id="q5" name="question5">
-<option value="yes">Yes</option>
-<option value="no">No</option>
-</select>
+<label>Favorite Programming Language:</label>
+<div class="options">
+<label><input type="radio" name="question1" value="javascript"> JavaScript</label>
+<label><input type="radio" name="question1" value="python"> Python</label>
+<label><input type="radio" name="question1" value="java"> Java</label>
+<label><input type="radio" name="question1" value="cpp"> C++</label>
+<label><input type="radio" name="question1" value="other"> Other</label>
+</div>
+<label>Preferred Coding Environment:</label>
+<div class="options">
+<label><input type="radio" name="question2" value="vscode"> Visual Studio Code</label>
+<label><input type="radio" name="question2" value="pycharm"> PyCharm</label>
+<label><input type="radio" name="question2" value="eclipse"> Eclipse</label>
+<label><input type="radio" name="question2" value="sublime"> Sublime Text</label>
+<label><input type="radio" name="question2" value="other"> Other</label>
+</div>
+<label>Code Review Experience:</label>
+<div class="options">
+<label><input type="radio" name="question3" value="positive"> Positive</label>
+<label><input type="radio" name="question3" value="neutral"> Neutral</label>
+<label><input type="radio" name="question3" value="negative"> Negative</label>
+</div>
+<label>Favorite Programming Paradigm:</label>
+<div class="options">
+<label><input type="radio" name="question4" value="oop"> Object-Oriented Programming</label>
+<label><input type="radio" name="question4" value="fp"> Functional Programming</label>
+<label><input type="radio" name="question4" value="procedural"> Procedural Programming</label>
+<label><input type="radio" name="question4" value="other"> Other</label>
+</div>
+<label>Code Documentation Practice:</label>
+<div class="options">
+<label><input type="radio" name="question5" value="yes"> Yes</label>
+<label><input type="radio" name="question5" value="no"> No</label>
+</div>
 <button type="submit">Submit</button>
 </form>
 <script>
